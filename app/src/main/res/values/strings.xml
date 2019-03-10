@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Base</string>
+    <string name="app_msg_close">Press Back button again to exit</string>
+
+    <string name="news_title">News</string>
+
+    <!--Favorite-->
+    <string name="favorite_title">Favorites</string>
+    <string name="favorite_msg_add">Ditambahkan ke Favorite</string>
+    <string name="favorite_msg_remove">Favorites</string>
+    <string name="favorite_error">Terjadi kesalahan\n%1$s</string>
+</resources>
