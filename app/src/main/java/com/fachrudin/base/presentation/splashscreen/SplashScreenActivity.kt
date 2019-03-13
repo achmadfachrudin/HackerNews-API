@@ -6,7 +6,6 @@ import com.fachrudin.base.core.BaseActivity
 import com.fachrudin.base.core.ViewDataBindingOwner
 import com.fachrudin.base.databinding.ActivitySplashScreenBinding
 import com.fachrudin.base.presentation.mainpage.MainPageActivity
-import com.fachrudin.base.presentation.mainpage.MainPageViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
