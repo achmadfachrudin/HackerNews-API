@@ -6,7 +6,7 @@
 
     <!--Favorite-->
     <string name="favorite_title">Favorites</string>
-    <string name="favorite_msg_add">Ditambahkan ke Favorite</string>
-    <string name="favorite_msg_remove">Favorites</string>
-    <string name="favorite_error">Terjadi kesalahan\n%1$s</string>
+    <string name="favorite_msg_add">Add to Favorite</string>
+    <string name="favorite_msg_remove">Remove from Favorite</string>
+    <string name="favorite_error">Error\n%1$s</string>
 </resources>
