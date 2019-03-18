@@ -30,12 +30,25 @@ class MainPageViewModelTest {
     @Test
     fun getIdNewsListFromApi() {
         Dispatchers.setMain(Dispatchers.Unconfined)
-        val respone = runBlocking {
+
+        // expected
+        val expectedRespone = runBlocking {
             service.getNewsListAsync().await()
         }
-        val idList = respone.body()
+        val expectedResult = expectedRespone.body()
 
-        Assert.assertEquals(500, idList?.size)
-//        viewModel.getIdNewsListFromApi()
+        // actual
+        viewModel.getIdNewsListFromApi()
+        delay()
+
+        Assert.assertEquals(expectedResult?.size, viewModel.idList?.size)
+    }
+
+    private fun delay() {
+        try {
+            Thread.sleep(2000)
+        } catch (e: InterruptedException) {
+            e.printStackTrace()
+        }
     }
 }

@@ -22,7 +22,7 @@ class MainPageViewModel : BaseViewModel() {
     val bShowErrorView = ObservableField<Boolean>(false)
     val bShowLoadingView = ObservableField<Boolean>(true)
 
-    private var idList = listOf<String>()
+    var idList = listOf<String>()
     private val list = mutableListOf<NewsItem>()
     private var newsList: MutableLiveData<List<NewsItem>>? = null
 
