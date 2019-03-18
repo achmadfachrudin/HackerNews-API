@@ -1,13 +1,17 @@
 package com.fachrudin.base.presentation.mainpage
 
 import com.fachrudin.base.network.RetrofitFactory
+import com.fachrudin.base.network.SampleService
+import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
+import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
+import retrofit2.Response
 
 /**
  * Created by achmad.fachrudin on 18-Mar-19
@@ -15,6 +19,9 @@ import org.mockito.MockitoAnnotations
 class MainPageViewModelTest {
     @Mock
     lateinit var viewModel: MainPageViewModel
+
+    @Mock
+    private lateinit var sampleService: SampleService
 
     private val service = RetrofitFactory.makeRetrofitService()
 
@@ -28,13 +35,21 @@ class MainPageViewModelTest {
     @Test
     fun getIdNewsListFromApi() {
         Dispatchers.setMain(Dispatchers.Unconfined)
-
-        var idList = listOf<String>()
+        lateinit var respone : Deferred<Response<List<String>>>
 
 //        Mockito.`when`(service.getNewsListAsync())
 //            .thenReturn(respone)
+        delay()
+//        var idList = respone.body()!!
 
         viewModel.getIdNewsListFromApi()
+    }
 
+    private fun delay() {
+        try {
+            Thread.sleep(2000)
+        } catch (e: InterruptedException) {
+            e.printStackTrace()
+        }
     }
 }
